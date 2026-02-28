@@ -191,5 +191,3 @@ Alguns registros do app em funcionamento:
   <img src="docs/screenshots/ticket-encerrado.png" alt="Detalhes do Ticket encerrado" width="240" />
   <img src="docs/screenshots/dashboard.png" alt="Dashboard" width="240" />
 </p>
-
-> **Como adicionar os prints:** salve as capturas de tela na pasta `docs/screenshots/` com os nomes: `login.png`, `home.png`, `novo-ticket.png`, `detalhes.png`, `dashboard.png`. Ajuste os nomes no README se preferir outros arquivos.
