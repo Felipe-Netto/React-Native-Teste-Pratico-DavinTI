@@ -14,15 +14,15 @@ export default function MetricsCard({ title, value }: MetricsCardProps) {
   return (
     <Card style={styles.metricCard}>
       <Card.Content style={styles.content}>
-        <Text 
-          variant="headlineMedium" 
+        <Text
+          variant="headlineMedium"
           style={[styles.value, { color: theme.colors.primary }]}
         >
           {value}
         </Text>
         <View style={styles.labelContainer}>
-           <Text 
-            variant="labelSmall" 
+          <Text
+            variant="labelSmall"
             style={styles.title}
           >
             {title.toUpperCase()}

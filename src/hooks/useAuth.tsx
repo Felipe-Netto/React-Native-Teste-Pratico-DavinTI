@@ -16,7 +16,7 @@ export const useAuth = create<AuthStore>()(
 
         throw new Error('Invalid username or password');
       },
-      
+
       logout: (): void => {
         set({ isLoggedIn: false });
       },

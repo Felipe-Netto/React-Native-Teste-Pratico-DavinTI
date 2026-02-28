@@ -13,11 +13,11 @@ import { RootStackParamList } from "../types/Navigation";
 export default function Home() {
   const tickets = useTicket((state) => state.tickets);
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
-  
+
   return (
     <ScreenView>
       <Header />
-      
+
       <View style={styles.titleSection}>
         <Text style={styles.mainTitle}>Meus Tickets</Text>
         <Text style={styles.ticketCount}>
@@ -25,19 +25,19 @@ export default function Home() {
         </Text>
       </View>
 
-      <FlatList 
-        data={tickets} 
+      <FlatList
+        data={tickets}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <TicketItem
             ticket={item}
             onPress={(id) => {
               navigation.navigate('TicketDetails', { id });
-            }} 
+            }}
           />
-        )} 
+        )}
         contentContainerStyle={[
-          styles.listContent, 
+          styles.listContent,
           tickets.length === 0 && { flex: 1 }
         ]}
         ListEmptyComponent={<EmptyList />}
