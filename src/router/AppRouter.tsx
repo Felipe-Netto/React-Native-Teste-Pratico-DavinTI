@@ -8,8 +8,10 @@ import Dashboard from '../screens/Dashboard';
 import Home from '../screens/Home';
 import Login from '../screens/Login';
 import NewTicket from '../screens/NewTicket';
+import TicketDetails from '../screens/TicketDetails';
+import { RootStackParamList } from '../types/Navigation';
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<RootStackParamList>();
 const Tab = createBottomTabNavigator();
 
 function TabNavigator() {
@@ -63,8 +65,9 @@ export default function AppRouter() {
       {isLoggedIn ? (
         <Stack.Screen name="Main" component={TabNavigator} />
       ) : (
-        <Stack.Screen name="Auth" component={Login} />
+        <Stack.Screen name="Login" component={Login} />
       )}
+      <Stack.Screen name="TicketDetails" component={TicketDetails} />
     </Stack.Navigator>
   );
 }
